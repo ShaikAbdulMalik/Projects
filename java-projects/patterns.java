@@ -97,15 +97,25 @@ public class patterns {
         // }
     
         // Pyramid pattern
-        for(int i = 1; i <= n; i++ ) // Controls the number of rows
+        // for(int i = 1; i <= n; i++ ) // Controls the number of rows
+        // {
+        //     for(int j = 1; j <= n - i; j++)
+        //     {
+        //         System.out.print(" ");
+        //     }
+        //     for(int j = 1; j <= 2*i-1; j++)
+        //     {
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
+
+        // print right angle triangle of size n
+        for(int i = 1; i <= n; i++)
         {
-            for(int j = 1; j <= n - i; j++)
+            for(int j = 1; j<=i; j++)
             {
-                System.out.print(" ");
-            }
-            for(int j = 1; j <= 2*i-1; j++)
-            {
-                System.out.print("*");
+                System.out.print("* ");
             }
             System.out.println();
         }
