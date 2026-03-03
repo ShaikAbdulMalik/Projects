@@ -3,30 +3,23 @@ public class Panagram {
      
         String str = "The quick brown fox jumps over the lazy dog";
         str = str.toLowerCase();
-        
-        boolean[] present = new boolean[26];
-        int count = 0;
+        boolean isPresent = true;
 
-        for(int i = 0; i < str.length(); i++ )
+        for(char ch = 'a'; ch <= 'z'; ch++)
         {
-            char ch = str.charAt(i);
-
-            if(ch >= 'a' && ch <= 'z')
+            if(!str.contains(String.valueOf(ch)))
             {
-                if(!present[ch - 'a'])
-                {
-                    present[ch - 'a'] = true;
-                    count++; 
-                }    
+                isPresent = false;
+                break;
             }
         }
-        if(count == 26)
+        if(isPresent)
         {
-            System.out.println("Panagram");
+            System.out.println("It is a Panagram");
         }
         else
         {
-            System.out.println("Not a Panagram");
+            System.out.println("It is not a panagram");
         }
-    }
+    }        
 }
