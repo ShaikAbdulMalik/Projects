@@ -71,11 +71,11 @@ java Main
 ### Python
 python main.py
 
-###🤝 Contributions
+### 🤝 Contributions
 This repository is primarily for learning and practice.
 Suggestions, improvements, and constructive feedback are always welcome.
 
-###📄 License
+### 📄 License
 This project is open-source and available under the MIT License.
 ⭐ If you find this useful
 Give the repository a ⭐ to support and follow the progress!
