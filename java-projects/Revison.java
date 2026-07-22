@@ -1,5 +1,21 @@
 import java.io.*;
 import java.util.*;
+// OOPS(object oriented Programming)
+// Class
+        class Student
+        {
+            int id;
+            String name;
+            // Constructor : 
+            // This is a Constructor it is called whenever the abj is created for this class 
+            // you cant call it manually
+            Student(int id, String name)
+            {
+                this.id = id;
+                this.name = name;
+                System.out.println("I am a Constructor");
+            }
+        }
 public class Revison {
 
     // public static void multiplicationTable(int n)
@@ -452,15 +468,75 @@ public class Revison {
         // hence true
         
         // String immutability
-        String s = "Java";
-        s = s + " Program";
-        System.out.println(s);
+        // String s = "Java";
+        // s = s + " Program";
+        // System.out.println(s);
         // Here what happens is String are immutable meaning once created its content cannot be changed so when we do this what happends is java creates two String 1-> "Java" and the other one 2 -> "Java program"
         // And s just points to the new String created
-        String s1 = "Hello";
-        s1 = s1.concat(" World");
-        System.out.println(s1);
+        // String s1 = "Hello";
+        // s1 = s1.concat(" World");
+        // System.out.println(s1);
 
+        // // Keywords for Strings :
+        // String name = "Malik";
+        // // Length
+        // System.out.println(name.length()); // length() keyword prints the length of the string
+        // // charAt(index)
+        // System.out.println(name.charAt(2)); // charAt(index) returns the character at the specified index
+        // System.out.println(name.charAt(name.length()-1));
+        // // SubString
+        // System.out.println(name.substring(1)); // Starts printing from the first index till the last 
+        // System.out.println(name.substring(1,3)); // here it starts printing from 1st indexxx till the 3rd one
+        // //indexOf()
+        // System.out.println(name.indexOf('i')); // Prints the index of the char or string mentioned
+        // // lastIndexOf()
+        // System.out.println(name.lastIndexOf('a')); // Shows the last occurencce of the character 'a'
+        // // contains
+        // System.out.println(name.contains("lik"));
+        // // startsWith()
+        // System.out.println(name.startsWith("ja"));// prints whether the String Starts with the given String or Character or not
+        // // endsWith()
+        // System.out.println(name.endsWith("lik")); //same but with ends with
+        // System.out.println("Apple".compareToIgnoreCase("APPLE"));
+        // System.out.println("Apple".equalsIgnoreCase("APPLE"));
+        // System.out.println("Java".replace('J','k'));
+        // System.out.println(name.isEmpty()); // cheecks whether the String is empty or not
+        // System.out.println(name.isBlank()); // same but with white spaces
+        // System.out.println(name.intern());
+
+        // StringBuilder and StringBuffer
+        // String Builder : a mutable sequence of characters.
+        // StringBuilder sb = new StringBuilder();
+        // // OR
+        // StringBuilder sb1 = new StringBuilder("Malik");
+        // // Append
+        // System.out.println(sb1.append(" Bhai"));
+        // // insert
+        // System.out.println(sb1.insert(1, 'b')); // inserts a character at the specified index
+        // // delete
+        // System.out.println(sb1.delete(3, 4));
+        // // deleteCharAt()
+        // System.out.println(sb1.deleteCharAt(2));
+        // // reverse
+        // System.out.println(sb1.reverse());
+        // // Capacity
+        // System.out.println(sb1.capacity());
+        // //toString()
+        // String s = sb1.toString();
+        // System.out.println(s);
+
+        // StringBuffer
+        //Everything learned in StringBuilder also applies to StringBuffer but its used for threads 
+
+        // OOPS(object oriented Programming)
+        // Object :
+        Student s1 = new Student(101,"malik");
+        System.out.println(s1.id);
+        System.out.println(s1.name);
+
+        Student s2 = new Student(102,"Abdul");
+        System.out.println(s2.id);
+        System.out.println(s2.name);
 
     }
 }
