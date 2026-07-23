@@ -1,21 +1,82 @@
 import java.io.*;
 import java.util.*;
 // OOPS(object oriented Programming)
-// Class
-        class Student
-        {
-            int id;
-            String name;
-            // Constructor : 
-            // This is a Constructor it is called whenever the abj is created for this class 
-            // you cant call it manually
-            Student(int id, String name)
-            {
-                this.id = id;
-                this.name = name;
-                System.out.println("I am a Constructor");
-            }
+
+//Encapsulation : 
+class Student
+{
+    private int age;
+    public void setAge(int age)
+    {
+        if(age>18){
+            this.age = age;
+            System.out.println("age : " + age);
         }
+        else
+            System.out.println("Error");
+    }
+    public int getAge()
+    {
+        return age;
+    }
+}
+// Static Block:
+// class Student
+// {
+//     static{
+//         System.out.println("Inside Static block"); 
+//         // this is excuted automatically without objects or anything as it beongs to the class itself
+//     }
+// }
+
+// Static methods :
+// A static method belongs to the class, not to any object.
+// class Student
+// {
+//     void study() // In order to call this i need to create an object
+//     {
+//         System.out.println("Studying....");
+//     }
+//     public static void read() // Whereas i nned  not create an object over here
+//     {
+//         System.out.println("Reading....");
+//     }
+// }
+
+// Static variable :
+// class Student 
+// {
+//     static String college = "Shadan";
+//     int id;
+// }
+
+// Class :
+// class Const
+// {
+//     int id; // This belongs to the object itself 
+//     String college;
+//     Const(int id, String college)
+//     {
+//         this.id = id; // we use the "this" keyword to tell the compiler that we want to use the instance variable
+//         this.college = college;
+//         System.out.println("In college");
+//     }
+// }        
+
+// class Student
+//         {
+//             int id;
+//             String name;
+//             // Constructor : 
+//             // This is a Constructor it is called whenever the obj is created for this class 
+//             // you cant call it manually
+//             Student(int id, String name)
+//             {
+//                 this.id = id;
+//                 this.name = name;
+//                 System.out.println("I am a Constructor");
+//             }
+//         }
 public class Revison {
 
     // public static void multiplicationTable(int n)
@@ -529,14 +590,47 @@ public class Revison {
         //Everything learned in StringBuilder also applies to StringBuffer but its used for threads 
 
         // OOPS(object oriented Programming)
+        
         // Object :
-        Student s1 = new Student(101,"malik");
-        System.out.println(s1.id);
-        System.out.println(s1.name);
+        // Student s1 = new Student(101,"malik");
+        // System.out.println(s1.id);
+        // System.out.println(s1.name);
+        // Student s2 = new Student(102,"Abdul");
+        // System.out.println(s2.id);
+        // System.out.println(s2.name);
+        // Const c = new Const(1, "Shadan");
+        // System.out.println(c.id);
+        // System.out.println(c.college);
 
-        Student s2 = new Student(102,"Abdul");
-        System.out.println(s2.id);
-        System.out.println(s2.name);
+        // Static Keyword :
+        // Student s1 = new Student();
+        // s1.id = 101;
+        // System.out.println(s1.id);
+        // System.out.println(s1.college); 
+        // This is common variable for all the objects
+        // The college variable is shared by all the objeects and does not need to be created each time 
+
+        // Static Method : 
+        // Student s = new Student();
+        // s.study();
+        // Student.read(); 
+        // // This does not require object creation...
+        // To invoke this we need className + Static MethodName
+        // Student s = new Student(); // We need to use this to load the class and then the static block would run
+        // System.out.println("Inside main method");
+
+        // Encapsulation : 
+        //Encapsulation is the process of wrapping data (variables) and methods into a single unit (class) while restricting direct access to the data.
+        // Encapsulation add a layer of security so that nobody can change the values of the variables easily
+        Student s = new Student();
+        s.setAge(20); // success 
+        // Always access the private variable by creating a method as Setter and the using getters to access or change the values
+        // This is use to set the age but how do you print or use it
+        // Thats done by getAge
+        // s.setAge(17); // Error
+        System.out.println(s.getAge());
+
+
 
     }
 }
