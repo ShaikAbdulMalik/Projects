@@ -113,5 +113,57 @@ public class Revision_V4 {
             }
         }
         System.out.println("The last ocurrance is at index : " + index1);
+
+        // countin occurances using binary search :
+        int key3 = 10;
+        int first = -1;
+        int low1= 0;
+        int high1 = arr.length-1;
+
+        // first occurance
+        while(low1 <= high1)
+        {
+            int mid = (low1 + high1)/2;
+            if(arr[mid] == key3)
+            {
+                first = mid;
+                high1 = mid - 1;
+            }
+            else if(arr[mid] < key3)
+            {
+                low1 = mid + 1;
+            }
+            else{
+                high1 = mid - 1;
+            }
+        }
+        // last occurance
+        int last = -1;
+        int low2 = 0;
+        int high2 = arr.length-1;
+        while(low2 <= high2){
+            int mid = (low2 + high2) / 2;
+            if(arr[mid] == key3){
+                last = mid;
+                low2 = mid + 1;
+            }
+            else if(arr[mid] < key3){
+                low2 = mid + 1;
+            }
+            else{
+                high2 = mid - 1;
+            }
+        }
+
+        // calclulate the occurances
+        if(first == -1)
+        {
+            System.out.println("element not found");
+        } else {
+            int count = last - first + 1;
+            System.out.println("First occurrence: " + first);
+            System.out.println("Last occurrence: " + last);
+            System.out.println("Total occurrences: " + count);
+        }
     }
 }
