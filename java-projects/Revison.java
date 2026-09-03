@@ -3,23 +3,23 @@ import java.util.*;
 // OOPS(object oriented Programming)
 
 //Encapsulation : 
-class Student
-{
-    private int age;
-    public void setAge(int age)
-    {
-        if(age>18){
-            this.age = age;
-            System.out.println("age : " + age);
-        }
-        else
-            System.out.println("Error");
-    }
-    public int getAge()
-    {
-        return age;
-    }
-}
+// class Student
+// {
+//     private int age;
+//     public void setAge(int age)
+//     {
+//         if(age>18){
+//             this.age = age;
+//             System.out.println("age : " + age);
+//         }
+//         else
+//             System.out.println("Error");
+//     }
+//     public int getAge()
+//     {
+//         return age;
+//     }
+// }
 // Static Block:
 // class Student
 // {
@@ -622,15 +622,66 @@ public class Revison {
         // Encapsulation : 
         //Encapsulation is the process of wrapping data (variables) and methods into a single unit (class) while restricting direct access to the data.
         // Encapsulation add a layer of security so that nobody can change the values of the variables easily
-        Student s = new Student();
-        s.setAge(20); // success 
+        // Student s = new Student();
+        // s.setAge(20); // success 
         // Always access the private variable by creating a method as Setter and the using getters to access or change the values
         // This is use to set the age but how do you print or use it
         // Thats done by getAge
         // s.setAge(17); // Error
-        System.out.println(s.getAge());
+        //System.out.println(s.getAge());
+        
+        // Decimal to Binary
+        // Scanner sc = new Scanner(System.in);
+        // int num = sc.nextInt();
+        // int bin = 0;
+        // int i = 1;
+        // while(num>0){
+        //     int rem = num % 2;
+        //     bin = bin + rem * i;
 
+        //     i = i * 10;
+        //     num = num / 2;
+        // }
+        // System.out.println(bin);
 
+        // Binary to Decimal
+        // int bin = sc.nextInt();
+        // int dec = 0;
+        // int pow = 1;
+
+        // while(bin > 0)
+        // {
+        //     int digit = bin % 10;
+        //     dec = dec + digit*pow;
+
+        //     pow = pow *2;
+        //     bin = bin / 10;
+        // }
+        // System.out.println(dec);
+
+        // Arrays 
+        // int[] arr = {1,3,4,5,6};
+        // for(int i : arr)
+        // {
+        //     System.out.print(i + " ");
+        // }
+
+        // Practice problem 1
+        int[] arr = new int[5];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array elements :");
+        for(int i = 0; i < arr.length; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for(int i : arr)
+        {
+            System.out.print(i + " ");
+            sum += i;
+        }
+        System.out.println("\n"+sum);
+        System.out.println("Average : " + sum/arr.length);
 
     }
 }
